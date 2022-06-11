@@ -10,6 +10,8 @@ namespace ELROOMBA.Viewmodels;
 /// </summary>
 public partial class MainWindowViewModel
 {
-
-
+    /// <summary>
+    /// Titulo principal de la aplicacion.
+    /// </summary>
+    public string Title = "ELROOMBA";
 }
