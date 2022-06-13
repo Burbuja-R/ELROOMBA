@@ -9,20 +9,125 @@
 
     <Grid RowDefinitions="28, *">
         <StackPanel x:Name="CustomTitleBar"
-                    Margin="0 0 1120 0"
+                    Margin="0 0 120 0"
                     Background="{ThemeResource AppBarBackgroundThemeBrush}"
                     Grid.Row="0"
                     Orientation="Horizontal">
-            <!--Logo de ELROOMBA-->
             <Image Source="Assets/ElRoomba.png" />
-            <!--Titulo de la aplicacion-->
             <TextBlock Margin="10 0 0 0"
                        FontWeight="Bold"
                        Text="{x:Bind Viewmodel.Title}"
-                       VerticalAlignment="Center"
-                
-                />
+                       VerticalAlignment="Center"/>
 
         </StackPanel>
+        
+        <Grid x:Name="GRID_MAIN"
+              Grid.Row="1"
+              Margin="10">
+
+            <ScrollViewer Height="270"
+                          IsTabStop="True"
+                          IsVerticalScrollChainingEnabled="True"
+                          HorizontalScrollMode="Enabled"
+                          HorizontalScrollBarVisibility="Auto"
+                          VerticalScrollMode="Enabled"
+                          VerticalScrollBarVisibility="Auto">
+
+                <Grid Margin="10"
+                      ColumnDefinitions="Auto, *"
+                      ColumnSpacing="5"
+                      RowSpacing="5">
+
+                    <Button></Button>
+                  
+                </Grid>
+                
+            </ScrollViewer>
+
+        </Grid>
+        
+        <Border x:Name="INFO_BORDER"
+                Background="{ThemeResource SystemControlAccentDark2AcrylicElementAccentDark2MediumHighBrush}"
+                Grid.Row="2"
+                Grid.Column="2"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Bottom"
+                Height="25">
+            
+            <Grid>
+
+                <Button Height="Auto" Click="_ONCLICK_ALERTDIALOG"
+                        Background="{ThemeResource SystemControlAccentDark2AcrylicElementAccentDark2MediumHighBrush}">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="BorderThickness" Value="0"/>
+                        </Style>
+                    </Button.Style>
+                    
+                    <StackPanel Orientation="Horizontal"
+                                Height="Auto">
+                        
+                        <Image Source="Assets/Alert.png" Width="20"
+                       Height="20"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       Margin="10 0 0 0"/>
+
+                        <TextBlock Text="{x:Bind Viewmodel._ALERTCOUNT}"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           FontSize="10"
+                           FontWeight="Bold"
+                           Margin="10 0 0 0"/>
+                        
+                    </StackPanel>
+                    
+                </Button>
+                
+                <Button Height="Auto" HorizontalAlignment="Right"
+                        VerticalAlignment="Center">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="BorderThickness" Value="0"/>
+                        </Style>
+                    </Button.Style>
+
+                    <StackPanel Orientation="Horizontal"
+                                Height="Auto">
+
+                        <TextBlock Text="Help"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Right"
+                           FontSize="10"
+                           FontWeight="Bold"
+                           />
+
+                    </StackPanel>
+                </Button>
+                
+                <ContentDialog x:Name="_ALERT_COUNT_DIALOG"
+                               CloseButtonText="Close">
+                    <ContentDialog.TitleTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Assets/ElRoomba.png" />
+                                <TextBlock Margin="10 0 0 0" 
+                                           Text="ELROOMBA"
+                                           FontWeight="Bold"
+                                           VerticalAlignment="Center"/>
+
+                            </StackPanel>
+                        </DataTemplate>
+                    </ContentDialog.TitleTemplate>
+                    <StackPanel>
+                        <TextBlock Text="Hemos detectado XXX Probklemas"/>
+                    </StackPanel>
+                </ContentDialog>
+
+            </Grid>
+            
+        </Border>
+        
+        
     </Grid>
 </Window>

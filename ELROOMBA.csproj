@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows10.0.19041.0</TargetFramework>
@@ -14,9 +14,13 @@
   </PropertyGroup>
   <ItemGroup>
   </ItemGroup>
+  
 
   <ItemGroup>
-	  <Content Include="Assets\ElRoomba.png" />
+    <Content Include="Assets\Alert.png" />
+	  <Content Include="Assets\Discord.png" />
+	  <Content Include="Assets\Spam.png" />
+      <Content Include="Assets\ElRoomba.png" />
 	  <Content Include="Assets\SplashScreen.scale-200.png" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\Square150x150Logo.scale-200.png" />

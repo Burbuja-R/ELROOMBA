@@ -88,7 +88,7 @@ public partial class App : Application
         /// preguardado anteriormente en la variable.
         /// </summary>
         /// <param name="args">Details about the launch request and process.</param>
-        _window = new Window();
+        _window = new MainWindow();
         Mwindow = _window.Content;
         _window.Content = grid;
         _window.Activate();
