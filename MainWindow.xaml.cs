@@ -18,7 +18,7 @@ public sealed partial class MainWindow : Window
     {
         this.InitializeComponent();
         ExtendsContentIntoTitleBar = true;
-        SetTitleBar(CustomTitleBar);
+        SetTitleBar(_CUSTOM_TITLE_BAR);
         Viewmodel = Ioc.Default.GetService<MainWindowViewModel>();
         Viewmodel.MainConstructorViewModel();
     }
