@@ -12,10 +12,13 @@
     <EnableMsixTooling>true</EnableMsixTooling>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-  
+  <ItemGroup>
+  </ItemGroup>
+
 
   <ItemGroup>
-    <Content Include="Assets\Alert.png" />
+	  <Content Include="Assets\State.png" />
+	  <Content Include="Assets\Alert.png" />
 	  <Content Include="Assets\Discord.png" />
 	  <Content Include="Assets\Spam.png" />
       <Content Include="Assets\ElRoomba.png" />
@@ -43,6 +46,9 @@
   -->
   <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <ProjectCapability Include="Msix" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\" />
   </ItemGroup>
 
   <!-- 

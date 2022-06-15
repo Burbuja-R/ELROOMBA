@@ -1,14 +1,13 @@
 ﻿<Window
     x:Class="ELROOMBA.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:ELROOMBA"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
     <Grid RowDefinitions="auto, *">
-        
+
         <Grid
             x:Name="_CUSTOM_TITLE_BAR"
             Grid.Row="0"
@@ -41,54 +40,86 @@
             Height="25">
 
             <Grid>
-                
-                <Button
-                    x:Name="_ALERT_BUTTON"
-                    Click="_ONCLICK_ALERTDIALOG"
-                    Background="{ThemeResource SystemControlAccentDark2AcrylicElementAccentDark2MediumHighBrush}">
-                    
-                    <Button.Style>
-                        <Style 
-                            TargetType="Button">
-                            <Setter 
-                                Property="BorderThickness" 
-                                Value="0"/>
-                        </Style>
-                    </Button.Style>
+
+                <StackPanel
+                    x:Name="_CONTROLS_STACKPANEL"
+                    Orientation="Horizontal">
 
                     <StackPanel
-                        x:Name="_ICONS_STACK"
-                        Orientation="Horizontal"
-                        Height="auto">
+                        x:Name="_CHANGE_STATE"
+                        Orientation="Horizontal">
 
                         <Image 
-                            x:Name="_ALERT_ICON"
-                            Source="Assets/Alert.png"
-                            Width="20"
-                            Height="20"
+                            x:Name="_STATE_ICON"
+                            Source="Assets/State.png"
+                            Width="15"
+                            Height="15"
                             HorizontalAlignment="Left"
                             VerticalAlignment="Center"
                             Margin="10 0 0 0" />
 
                         <TextBlock 
-                            x:Name="_ALERT_COUNT_TEXT"
-                            Text="{x:Bind Viewmodel._ALERTCOUNT}"
+                            x:Name="CHANGE_STATE_TEXT"
+                            Text="{x:Bind Viewmodel._STATE_TEXT_CHANGE}"
                             VerticalAlignment="Center"
                             HorizontalAlignment="Left"
-                            FontSize="10"
+                            FontSize="9"
                             FontWeight="SemiBold"
                             Margin="10 0 0 0"/>
 
-                    </StackPanel>
-                    
-                </Button>
 
+                    </StackPanel>
+
+                    <Button
+                        x:Name="_ALERT_BUTTON"
+                        Click="_ONCLICK_ALERTDIALOG"
+                        Background="{ThemeResource SystemControlAccentDark2AcrylicElementAccentDark2MediumHighBrush}"
+                        Margin="5 0 0 0">
+
+                        <Button.Style>
+                            <Style 
+                            TargetType="Button">
+                                <Setter 
+                                Property="BorderThickness" 
+                                Value="0"/>
+                            </Style>
+                        </Button.Style>
+
+                        <StackPanel
+                            x:Name="_ICONS_STACK"
+                            Orientation="Horizontal"
+                            Height="auto">
+
+                            <Image
+                                 x:Name="_ALERT_ICON"
+                                 Source="Assets/Alert.png"
+                                 Height="20"
+                                 HorizontalAlignment="Left"
+                                 VerticalAlignment="Center"
+                                 Margin="10 0 0 0" />
+
+                            <TextBlock
+                                 x:Name="_ALERT_COUNT_TEXT"
+                                 Text="{x:Bind Viewmodel._ALERTCOUNT}"
+                                 VerticalAlignment="Center"
+                                 HorizontalAlignment="Left"
+                                 FontSize="10"
+                                 FontWeight="SemiBold"
+                                 Margin="10 0 0 0"/>
+                            
+                        </StackPanel>
+
+                    </Button>
+                
+                </StackPanel>
 
                 <Button
-                    x:Name="_HELP_BUTTON"
-                    Height="auto"
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Center">
+                        x:Name="_HELP_BUTTON"
+                        Height="auto"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                        Background="{ThemeResource SystemControlAccentDark2AcrylicElementAccentDark2MediumHighBrush}">
+
                     <Button.Style>
                         <Style 
                             TargetType="Button">
@@ -99,27 +130,26 @@
                     </Button.Style>
 
                     <StackPanel
-                        x:Name="_HELP_STACKPANEL"
-                        Orientation="Horizontal"
-                        Height="auto">
+                            x:Name="_HELP_STACKPANEL"
+                            Orientation="Horizontal"
+                            Height="auto">
 
                         <TextBlock 
-                            x:Name="_HELP_TEXT"
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="Right"
-                            FontSize="10"
-                            FontWeight="SemiBold"
-                            Text="Help"/>
+                                x:Name="_HELP_TEXT"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                FontSize="10"
+                                FontWeight="SemiBold"
+                                Text="Help"/>
 
                     </StackPanel>
-                    
                 </Button>
 
                 <ContentDialog 
                     x:Name="_ALERT_COUNT_DIALOG"
                     CloseButtonText="Cerrar"
                     Title="{x:Bind Viewmodel._ALERT_TEXTT}">
-                    
+
                     <ContentDialog.TitleTemplate>
                         <DataTemplate>
                             <StackPanel 
@@ -128,7 +158,7 @@
                                 <Image 
                                     x:Name="_ROOMBA_IMAGE"
                                     Source="Assets/ElRoomba.png"/>
-                                
+
                                 <TextBlock 
                                     x:Name="_ROOMBA_TEXT_ALERT_DIALOG"
                                     Margin="10 0 0 0" 
@@ -140,12 +170,20 @@
                         </DataTemplate>
                     </ContentDialog.TitleTemplate>
 
-                    <StackPanel 
+
+                    <ScrollViewer 
+                            x:Name="SCROLLBAR_ALERT_DIAGNOSTIC"
+                            VerticalScrollBarVisibility="Visible"
+                            HorizontalScrollBarVisibility="Visible"
+                            VerticalScrollMode="Enabled"
+                            HorizontalScrollMode="Enabled">
+
+                        <StackPanel 
                         x:Name="_ALERTDIALOG_MAINSTACKPANEL"
                         Orientation="Vertical"
                         Padding="25">
 
-                        <TextBlock 
+                            <TextBlock 
                             x:Name="_PROBLEM_TEXT"
                             Text="{x:Bind Viewmodel._ALERT_TEXTT}"
                             FontWeight="Bold"
@@ -154,33 +192,37 @@
                             VerticalAlignment="Top"
                             HorizontalAlignment="Left"/>
 
-                        <ScrollViewer 
-                            x:Name="SCROLLBAR_ALERT_DIAGNOSTIC"
-                            VerticalScrollBarVisibility="Visible"
-                            HorizontalScrollBarVisibility="Visible"
-                            VerticalScrollMode="Enabled"
-                            HorizontalScrollMode="Enabled">
-
                             <StackPanel
-                                 x:Name="_SCROLL_GRID_ALERT"
+                                x:Name="_SCROLL_GRID_ALERT"
                                 Orientation="Vertical">
+
 
                                 <TextBlock 
                                     x:Name="_PROBLEM_DIAGNOSTIC_TEXT"
                                     Text="{x:Bind Viewmodel._Diagnostic_Problem_Text1}"
-                                    FontWeight="Normal"
+                                    FontWeight="SemiBold"
+                                    FontSize="10"
+                                    FontStretch="Normal" />
+
+                                <TextBlock 
+                                    x:Name="_PROBLEM_DIAGNOSTIC2_TEXT"
+                                    Text="{x:Bind Viewmodel._Diagnostic_Problem_Text22}"
+                                    FontWeight="SemiBold"
+                                    FontSize="10"
+                                    FontStretch="Normal" />
+
+                                <TextBlock 
+                                    x:Name="_PROBLEM_DIAGNOSTIC3_TEXT"
+                                    Text="{x:Bind Viewmodel._Diagnostic_Problem_Text33}"
+                                    FontWeight="SemiBold"
                                     FontSize="10"
                                     FontStretch="Normal" />
 
                             </StackPanel>
-                            
-                        </ScrollViewer>
-
-                    </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
                 </ContentDialog>
-                
             </Grid>
-
         </Border>
     </Grid>
 </Window>
