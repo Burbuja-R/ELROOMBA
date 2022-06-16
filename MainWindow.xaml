@@ -106,11 +106,11 @@
                                  FontSize="10"
                                  FontWeight="SemiBold"
                                  Margin="10 0 0 0"/>
-                            
+
                         </StackPanel>
 
                     </Button>
-                
+
                 </StackPanel>
 
                 <Button
@@ -194,29 +194,54 @@
 
                             <StackPanel
                                 x:Name="_SCROLL_GRID_ALERT"
-                                Orientation="Vertical">
-
-
-                                <TextBlock 
-                                    x:Name="_PROBLEM_DIAGNOSTIC_TEXT"
-                                    Text="{x:Bind Viewmodel._Diagnostic_Problem_Text1}"
-                                    FontWeight="SemiBold"
-                                    FontSize="10"
-                                    FontStretch="Normal" />
+                                Orientation="Vertical"
+                                Margin="0 20 0 0">
 
                                 <TextBlock 
-                                    x:Name="_PROBLEM_DIAGNOSTIC2_TEXT"
-                                    Text="{x:Bind Viewmodel._Diagnostic_Problem_Text22}"
-                                    FontWeight="SemiBold"
-                                    FontSize="10"
-                                    FontStretch="Normal" />
+                                    x:Name="_PROBLEM_DIAGNOSTICS_TEXT">
+                                    
+                                    <Run 
+                                        x:Name="_PROBLEM_DIAGNOSTIC_TEXT"
+                                        Text="{x:Bind Viewmodel._Diagnostic_Problem_Text1}"
+                                        FontWeight="SemiBold"
+                                        FontSize="10"
+                                        FontStretch="Normal">
+                                    </Run>
+                                    <LineBreak />
+                                    <Run 
+                                        x:Name="_PROBLEM_DIAGNOSTIC2_TEXT"
+                                        Text="{x:Bind Viewmodel._Diagnostic_Problem_Text22}"
+                                        FontWeight="SemiBold"
+                                        FontSize="10"
+                                        FontStretch="Normal">
+                                    </Run>
+                                    <LineBreak />
+                                    <Run 
+                                        x:Name="_PROBLEM_DIAGNOSTIC3_TEXT"
+                                        Text="{x:Bind Viewmodel._Diagnostic_Problem_Text33}"
+                                        FontWeight="SemiBold"
+                                        FontSize="10"
+                                        FontStretch="Normal">
+                                    </Run>
+                                    <LineBreak />
+                                    <Run 
+                                        x:Name="_PROBLEM_DIAGNOSTIC5_TEXT"
+                                        Text="{x:Bind Viewmodel._Diagnostic_Problem_Text55}"
+                                        FontWeight="SemiBold"
+                                        FontSize="10"
+                                        FontStretch="Normal">
+                                    </Run>
+                                    <LineBreak />
+                                    <Run 
+                                        x:Name="_PROBLEM_DIAGNOSTIC4_TEXT"
+                                        Text="{x:Bind Viewmodel._Diagnostic_Problem_Text44}"
+                                        FontWeight="SemiBold"
+                                        FontSize="10"
+                                        FontStretch="Normal">
+                                    </Run>
+                                    <LineBreak />
 
-                                <TextBlock 
-                                    x:Name="_PROBLEM_DIAGNOSTIC3_TEXT"
-                                    Text="{x:Bind Viewmodel._Diagnostic_Problem_Text33}"
-                                    FontWeight="SemiBold"
-                                    FontSize="10"
-                                    FontStretch="Normal" />
+                                </TextBlock>
 
                             </StackPanel>
                         </StackPanel>

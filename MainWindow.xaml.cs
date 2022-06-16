@@ -24,10 +24,11 @@ public sealed partial class MainWindow : Window
         SetTitleBar(_CUSTOM_TITLE_BAR);
         Viewmodel = Ioc.Default.GetService<MainWindowViewModel>();
         Viewmodel.MainConstructorViewModel();
-        if(Viewmodel._ALERTCOUNT > 0) {_INFO_BORDER.Background = new SolidColorBrush(Colors.DarkRed); _ALERT_BUTTON.Background = new SolidColorBrush(Colors.DarkRed); _HELP_BUTTON.Background = new SolidColorBrush(Colors.DarkRed); }
+        if (Viewmodel._ALERTCOUNT > 0) {_INFO_BORDER.Background = new SolidColorBrush(Colors.DarkRed); _ALERT_BUTTON.Background = new SolidColorBrush(Colors.DarkRed); _HELP_BUTTON.Background = new SolidColorBrush(Colors.DarkRed); }
     }
 
-    public MainWindowViewModel? Viewmodel { get; }
+    public MainWindowViewModel? Viewmodel { get; set; }
 
     private async void _ONCLICK_ALERTDIALOG(object sender, RoutedEventArgs e) { ContentDialogResult _AlertDialog = await _ALERT_COUNT_DIALOG.ShowAsync(); }
+    
 }
