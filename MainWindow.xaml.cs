@@ -1,4 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.DependencyInjection;
+using ELROOMBA.Pages;
+using ELROOMBA.Pages.Components;
 using ELROOMBA.Viewmodels;
 using Microsoft.UI;
 using Microsoft.UI.Xaml;
@@ -24,7 +26,8 @@ public sealed partial class MainWindow : Window
         SetTitleBar(_CUSTOM_TITLE_BAR);
         Viewmodel = Ioc.Default.GetService<MainWindowViewModel>();
         Viewmodel.MainConstructorViewModel();
-        if (Viewmodel._ALERTCOUNT > 0) {_INFO_BORDER.Background = new SolidColorBrush(Colors.DarkRed); _ALERT_BUTTON.Background = new SolidColorBrush(Colors.DarkRed); _HELP_BUTTON.Background = new SolidColorBrush(Colors.DarkRed); }
+        _MAIN_FRAME.Navigate(typeof(MainViewPage));
+        _NAVBAR_FRAME.Navigate(typeof(NavbarViewFrame));
     }
 
     public MainWindowViewModel? Viewmodel { get; set; }

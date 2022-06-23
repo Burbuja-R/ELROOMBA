@@ -8,11 +8,19 @@
 
     <Grid RowDefinitions="auto, *">
 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        
         <Grid
             x:Name="_CUSTOM_TITLE_BAR"
             Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
             Height="30"
-            Background="{ThemeResource AppBarBackgroundThemeBrush}">
+            Background="#00A884">
             <Image
                 Margin="8,0"
                 HorizontalAlignment="Left"
@@ -27,14 +35,23 @@
 
         <Frame 
             x:Name="_MAIN_FRAME"
-            Grid.Row="1"/>
+            Grid.Row="1"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"/>
 
 
+        <Frame
+            x:Name="_NAVBAR_FRAME"
+            Grid.Row="1"
+            Grid.Column="0"/>
+        
+        
         <Border 
             x:Name="_INFO_BORDER"
-            Background="{ThemeResource SystemControlAccentDark2AcrylicElementAccentDark2MediumHighBrush}"
+            Background="#00A884"
             Grid.Row="2"
-            Grid.Column="2"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
             HorizontalAlignment="Stretch"
             VerticalAlignment="Bottom"
             Height="25">
@@ -73,7 +90,7 @@
                     <Button
                         x:Name="_ALERT_BUTTON"
                         Click="_ONCLICK_ALERTDIALOG"
-                        Background="{ThemeResource SystemControlAccentDark2AcrylicElementAccentDark2MediumHighBrush}"
+                        Background="#00A884"
                         Margin="5 0 0 0">
 
                         <Button.Style>
@@ -118,7 +135,7 @@
                         Height="auto"
                         HorizontalAlignment="Right"
                         VerticalAlignment="Center"
-                        Background="{ThemeResource SystemControlAccentDark2AcrylicElementAccentDark2MediumHighBrush}">
+                        Background="#00A884">
 
                     <Button.Style>
                         <Style 

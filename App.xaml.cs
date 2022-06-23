@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.DependencyInjection;
+using ELROOMBA.Pages.Components;
 using ELROOMBA.Viewmodels;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.UI.Text;
@@ -27,6 +28,7 @@ public partial class App : Application
     {
         this.InitializeComponent();
         Ioc.Default.ConfigureServices(new ServiceCollection()
+            .AddSingleton<NavbarFrameViewModel>()
             .AddSingleton<MainWindowViewModel>()
             .BuildServiceProvider());
     }
