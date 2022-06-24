@@ -28,10 +28,10 @@ public sealed partial class MainWindow : Window
         Viewmodel.MainConstructorViewModel();
         _MAIN_FRAME.Navigate(typeof(MainViewPage));
         _NAVBAR_FRAME.Navigate(typeof(NavbarViewFrame));
+        _INFO_BAR.Navigate(typeof(InfobarViewFrame));
     }
 
     public MainWindowViewModel? Viewmodel { get; set; }
 
-    private async void _ONCLICK_ALERTDIALOG(object sender, RoutedEventArgs e) { ContentDialogResult _AlertDialog = await _ALERT_COUNT_DIALOG.ShowAsync(); }
     
 }

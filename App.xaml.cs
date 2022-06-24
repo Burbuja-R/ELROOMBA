@@ -29,6 +29,7 @@ public partial class App : Application
         this.InitializeComponent();
         Ioc.Default.ConfigureServices(new ServiceCollection()
             .AddSingleton<NavbarFrameViewModel>()
+            .AddSingleton<InfobarFrameViewModel>()
             .AddSingleton<MainWindowViewModel>()
             .BuildServiceProvider());
     }

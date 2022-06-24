@@ -23,7 +23,44 @@
                 x:Name="_IMAGE_ACCOUNT"
                 DisplayName="{x:Bind Viewmodel._DISPLAY_NAME_PERSONA_PICTURE}" 
                 Height="45"
-                Margin="15 0 0 0"/>
+                Margin="5 0 0 0"/>
+
+            <Button 
+                x:Name="_BUTTON_FAV_TWEAKS"
+                Width="45"
+                Height="45"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Left"
+                Margin="190 0 0 0"
+                Background="#202C33">
+
+                <Button.Resources>
+                    <Style 
+                        TargetType="Button">
+                        <Setter 
+                            Property="BorderThickness"
+                            Value="0"/>
+                        <Setter
+                            Property="CornerRadius"
+                            Value="{StaticResource ControlCornerRadius}"/>
+                    </Style>
+                </Button.Resources>
+
+                <Grid
+                    x:Name="_MAIN_GRID_BUTTON">
+                    
+                    <Image 
+                        x:Name="_MAIN_IMAGE_BUTTON"
+                        Source="ms-appx:///Assets/Fav.png"
+                        Width="auto"
+                        Height="35"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"/>
+                    
+                </Grid>
+                
+            </Button>
+
 
         </StackPanel>
 

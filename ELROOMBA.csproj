@@ -13,12 +13,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="Pages\Components\NavbarViewFrame.xaml" />
-    <None Remove="Pages\MainViewPage.xaml" />
+    <None Remove="Pages\Components\InfobarViewFrame.xaml" />
   </ItemGroup>
-
-
   <ItemGroup>
+    <None Include="Pages\Components\NavbarViewFrame.xaml" />
+    <None Include="Pages\MainViewPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+	  <Content Include="Assets\Fav.png" />
 	  <Content Include="Assets\State.png" />
 	  <Content Include="Assets\Alert.png" />
 	  <Content Include="Assets\Discord.png" />
@@ -48,6 +50,11 @@
   -->
   <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <ProjectCapability Include="Msix" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Pages\Components\InfobarViewFrame.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Pages\MainViewPage.xaml">
