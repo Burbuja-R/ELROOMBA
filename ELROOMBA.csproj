@@ -13,13 +13,16 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="Pages\Components\InfobarViewFrame.xaml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Pages\Components\NavbarViewFrame.xaml" />
-    <None Include="Pages\MainViewPage.xaml" />
-  </ItemGroup>
-  <ItemGroup>
+	  <Content Include="Assets\Advertencia.png" />
+	  <Content Include="Assets\Chatbot.png" />
+	  <Content Include="Assets\Gpu.png" />
+	  <Content Include="Assets\Internet.png" />
+	  <Content Include="Assets\Energy.png" />
+	  <Content Include="Assets\System.png" />
+	  <Content Include="Assets\Actualizar.png" />
+	  <None Include="Pages\Components\InfobarViewFrame.xaml" />
+	  <None Include="Pages\MainViewPage.xaml" />
+	  <Content Include="Assets\Ajustes.png" />
 	  <Content Include="Assets\Fav.png" />
 	  <Content Include="Assets\State.png" />
 	  <Content Include="Assets\Alert.png" />
@@ -58,11 +61,6 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="Pages\MainViewPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="Pages\Components\NavbarViewFrame.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

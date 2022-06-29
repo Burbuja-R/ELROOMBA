@@ -10,5 +10,44 @@
 
     <Grid>
 
+        <ScrollViewer HorizontalScrollBarVisibility="Visible" HorizontalScrollMode="Enabled">
+            
+            <Grid>
+
+                <Image Source="ms-appx:///Assets/Chatbot.png"
+                   Width="96"
+                   Height="96"
+                   VerticalAlignment="Top" HorizontalAlignment="Center"
+                   Margin="0 40 0 0"/>
+
+                <TextBlock Text="Hey!, Welcome To ELRoomba"
+                       FontSize="40" FontWeight="ExtraBlack"
+                       VerticalAlignment="Top" HorizontalAlignment="Center"
+                       Margin="0 120 0 0"/>
+
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center"
+                        HorizontalAlignment="Left" Margin="15 -45 0 0">
+
+                    <TextBlock FontSize="12">
+                    <Run FontSize="20" FontWeight="Bold">Here we will solve your doubts about ElRoomba</Run>
+                    <Run ></Run>
+                    </TextBlock>
+
+                </StackPanel>
+
+
+            </Grid>
+            
+        </ScrollViewer>
+        
+      
+        
+        
+        
+        
+        <Frame
+            x:Name="_INFO_BAR"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Bottom" />
     </Grid>
 </Page>

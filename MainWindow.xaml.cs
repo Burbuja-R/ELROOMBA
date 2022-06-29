@@ -27,8 +27,6 @@ public sealed partial class MainWindow : Window
         Viewmodel = Ioc.Default.GetService<MainWindowViewModel>();
         Viewmodel.MainConstructorViewModel();
         _MAIN_FRAME.Navigate(typeof(MainViewPage));
-        _NAVBAR_FRAME.Navigate(typeof(NavbarViewFrame));
-        _INFO_BAR.Navigate(typeof(InfobarViewFrame));
     }
 
     public MainWindowViewModel? Viewmodel { get; set; }

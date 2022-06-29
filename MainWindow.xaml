@@ -9,7 +9,7 @@
     <Grid RowDefinitions="auto, *">
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300"/>
+            <ColumnDefinition />
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
@@ -33,26 +33,88 @@
                 TextWrapping="NoWrap" />
         </Grid>
 
-        <Frame 
+        <NavigationView x:Name="nvSample"
+                        IsSettingsVisible="False"
+                        IsBackButtonVisible="Visible"
+                        IsPaneToggleButtonVisible="False"
+                        IsBackEnabled="True"
+                        Grid.Row="1"
+                        PaneTitle="ELRoomba"
+                        Grid.ColumnSpan="3"
+                        Grid.Column="0"
+                        PaneDisplayMode="Left"
+                        IsTabStop="False"
+                        Background="#111B21">
+
+            <NavigationView.MenuItems>
+                <NavigationViewItem Content="SytemTweaks" Tag="SystemTweaks" x:Name="SystemTweaks">
+                    <NavigationViewItem.Icon>
+                        <ImageIcon Source="ms-appx:///Assets/System.png"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="InternetTweaks" Tag="InternetTweawks" x:Name="InternetTweawks" SelectsOnInvoked="True">
+                    <NavigationViewItem.Icon>
+                        <ImageIcon Source="ms-appx:///Assets/Internet.png"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="EnergyTweaks" Tag="EnergyTweaks" x:Name="EnergyTweaks" SelectsOnInvoked="True">
+                    <NavigationViewItem.Icon>
+                        <ImageIcon Source="ms-appx:///Assets/Energy.png"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="GpuTweaks" Tag="GpuTweaks" x:Name="GpuTweaks">
+                    <NavigationViewItem.Icon>
+                        <ImageIcon Source="ms-appx:///Assets/Gpu.png"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="CpuTweaks" Tag="CpuTweaks" x:Name="CpuTweaks">
+                    <NavigationViewItem.Icon>
+                        <ImageIcon Source="ms-appx:///Assets/Cpu.png"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+            
+            
+            <NavigationView.FooterMenuItems>
+                <NavigationViewItem  AutomationProperties.Name="Favorite" Content="Favorite">
+                    <NavigationViewItem.Icon>
+                        <ImageIcon Source="ms-appx:///Assets/Fav.png"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem  AutomationProperties.Name="Account" Content="Account">
+                    <NavigationViewItem.Icon>
+                        <ImageIcon Source="ms-appx:///Assets/Chatbot.png"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem  AutomationProperties.Name="Settings" Content="Settings">
+                    <NavigationViewItem.Icon>
+                        <ImageIcon Source="ms-appx:///Assets/Ajustes.png"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.FooterMenuItems>
+
+
+
+            <NavigationView.PaneCustomContent>
+                <Grid>
+                    <MenuFlyoutSeparator  />
+                </Grid>
+            </NavigationView.PaneCustomContent>
+            
+            <NavigationView.AutoSuggestBox>
+                <AutoSuggestBox QueryIcon="Find" AutomationProperties.Name="Search" PlaceholderText="Search.."/>
+            </NavigationView.AutoSuggestBox>
+
+            <Frame 
             x:Name="_MAIN_FRAME"
             Grid.Row="1"
             Grid.Column="1"
-            Grid.ColumnSpan="2"/>
+            Grid.ColumnSpan="3"/>
 
+        </NavigationView>
 
-        <Frame
-            x:Name="_NAVBAR_FRAME"
-            Grid.Row="1"
-            Grid.Column="0"/>
+      
 
-
-        <Frame
-            x:Name="_INFO_BAR"
-            Grid.Row="2"
-            Grid.Column="0"
-            Grid.ColumnSpan="3"
-            HorizontalAlignment="Stretch"
-            VerticalAlignment="Bottom" />
 
     </Grid>
 </Window>
