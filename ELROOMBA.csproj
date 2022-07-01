@@ -13,6 +13,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="Pages\**" />
+    <EmbeddedResource Remove="Pages\**" />
+    <None Remove="Pages\**" />
+    <Page Remove="Pages\**" />
+  </ItemGroup>
+  <ItemGroup>
+	  <Content Include="Assets\windows.gif" />
+	  <Content Include="Assets\Cpu.png" />
 	  <Content Include="Assets\Advertencia.png" />
 	  <Content Include="Assets\Chatbot.png" />
 	  <Content Include="Assets\Gpu.png" />
@@ -20,8 +28,6 @@
 	  <Content Include="Assets\Energy.png" />
 	  <Content Include="Assets\System.png" />
 	  <Content Include="Assets\Actualizar.png" />
-	  <None Include="Pages\Components\InfobarViewFrame.xaml" />
-	  <None Include="Pages\MainViewPage.xaml" />
 	  <Content Include="Assets\Ajustes.png" />
 	  <Content Include="Assets\Fav.png" />
 	  <Content Include="Assets\State.png" />
@@ -54,16 +60,6 @@
   <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <ProjectCapability Include="Msix" />
   </ItemGroup>
-  <ItemGroup>
-    <Page Update="Pages\Components\InfobarViewFrame.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="Pages\MainViewPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
 
   <!-- 
     Defining the "HasPackageAndPublishMenuAddedByProject" property here allows the Solution 
@@ -73,4 +69,63 @@
   <PropertyGroup Condition="'$(DisableHasPackageAndPublishMenuAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <HasPackageAndPublishMenu>true</HasPackageAndPublishMenu>
   </PropertyGroup>
+  <ItemGroup>
+    <PRIResource Remove="Pages\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="View\AccountTweaksViewPage.xaml" />
+    <None Remove="View\CpuTweaksViewPage.xaml" />
+    <None Remove="View\EnergyTweaksViewPage.xaml" />
+    <None Remove="View\FavoriteTweaksViewPage.xaml" />
+    <None Remove="View\GpuTweaksViewPage.xaml" />
+    <None Remove="View\InternetTweaksViewPage.xaml" />
+    <None Remove="View\LoginViewPage.xaml" />
+    <None Remove="View\SettingsTweaksViewPage.xaml" />
+    <None Remove="View\SystemTweaksViewPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\FavoriteTweaksViewPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\AccountTweaksViewPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\SettingsTweaksViewPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\CpuTweaksViewPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\GpuTweaksViewPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\EnergyTweaksViewPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\InternetTweaksViewPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\SystemTweaksViewPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\LoginViewPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
 </Project>

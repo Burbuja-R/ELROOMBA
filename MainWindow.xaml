@@ -13,107 +13,217 @@
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        
-        <Grid
-            x:Name="_CUSTOM_TITLE_BAR"
-            Grid.Row="0"
-            Grid.Column="0"
-            Grid.ColumnSpan="3"
-            Height="30"
-            Background="#00A884">
-            <Image
-                Margin="8,0"
-                HorizontalAlignment="Left"
-                Source="Assets/ElRoomba.png" />
-            <TextBlock
-                x:Name="_TITLE_TEXT_BLOCK"
-                Margin="40,0,0,0"
-                VerticalAlignment="Center"
-                Text="{x:Bind Viewmodel.Title}"
-                TextWrapping="NoWrap" />
+
+        <Grid x:Name="_CUSTOM_TITLE_BAR" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
+              Height="30" Background="#00A884">
+            
+            <Image Margin="8,0" HorizontalAlignment="Left" Source="Assets/ElRoomba.png" />
+
+            <TextBlock x:Name="_TITLE_TEXT_BLOCK" Margin="40,0,0,0" VerticalAlignment="Center"
+                       Text="{x:Bind Viewmodel.Title}" TextWrapping="NoWrap" />
+            
         </Grid>
 
-        <NavigationView x:Name="nvSample"
-                        IsSettingsVisible="False"
-                        IsBackButtonVisible="Visible"
-                        IsPaneToggleButtonVisible="False"
-                        IsBackEnabled="True"
-                        Grid.Row="1"
-                        PaneTitle="ELRoomba"
-                        Grid.ColumnSpan="3"
-                        Grid.Column="0"
-                        PaneDisplayMode="Left"
-                        IsTabStop="False"
-                        Background="#111B21">
-
+        <NavigationView x:Name="nvSample" IsSettingsVisible="False" IsBackButtonVisible="Collapsed" IsPaneToggleButtonVisible="True"
+                        Grid.Row="1" PaneTitle="ELRoomba" Grid.ColumnSpan="3" Grid.Column="0" PaneDisplayMode="Left" IsTabStop="False"
+                        Background="#111B21" SelectionChanged="NAVIGATIONVIEW">
             <NavigationView.MenuItems>
-                <NavigationViewItem Content="SytemTweaks" Tag="SystemTweaks" x:Name="SystemTweaks">
+                <NavigationViewItem Content="SytemTweaks" Tag="SystemTweaksViewPage" x:Name="SystemTweaks">
                     <NavigationViewItem.Icon>
                         <ImageIcon Source="ms-appx:///Assets/System.png"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Content="InternetTweaks" Tag="InternetTweawks" x:Name="InternetTweawks" SelectsOnInvoked="True">
+                <NavigationViewItem Content="InternetTweaks" Tag="InternetTweaksViewPage" x:Name="InternetTweaks" SelectsOnInvoked="True">
                     <NavigationViewItem.Icon>
                         <ImageIcon Source="ms-appx:///Assets/Internet.png"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Content="EnergyTweaks" Tag="EnergyTweaks" x:Name="EnergyTweaks" SelectsOnInvoked="True">
+                <NavigationViewItem Content="EnergyTweaks" Tag="EnergyTweaksViewPage" x:Name="EnergyTweaks" SelectsOnInvoked="True">
                     <NavigationViewItem.Icon>
                         <ImageIcon Source="ms-appx:///Assets/Energy.png"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Content="GpuTweaks" Tag="GpuTweaks" x:Name="GpuTweaks">
+                <NavigationViewItem Content="GpuTweaks" Tag="GpuTweaksViewPage" x:Name="GpuTweaks">
                     <NavigationViewItem.Icon>
                         <ImageIcon Source="ms-appx:///Assets/Gpu.png"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Content="CpuTweaks" Tag="CpuTweaks" x:Name="CpuTweaks">
+                <NavigationViewItem Content="CpuTweaks" Tag="CpuTweaksViewPage" x:Name="CpuTweaks">
                     <NavigationViewItem.Icon>
                         <ImageIcon Source="ms-appx:///Assets/Cpu.png"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
             </NavigationView.MenuItems>
-            
-            
             <NavigationView.FooterMenuItems>
-                <NavigationViewItem  AutomationProperties.Name="Favorite" Content="Favorite">
+                <NavigationViewItem  AutomationProperties.Name="Favorite" Content="Favorite" Tag="FavoriteTweaksViewPage">
                     <NavigationViewItem.Icon>
                         <ImageIcon Source="ms-appx:///Assets/Fav.png"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem  AutomationProperties.Name="Account" Content="Account">
+                <NavigationViewItem  AutomationProperties.Name="Account" Content="Account" Tag="AccountTweaksViewPage">
                     <NavigationViewItem.Icon>
                         <ImageIcon Source="ms-appx:///Assets/Chatbot.png"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem  AutomationProperties.Name="Settings" Content="Settings">
+                <NavigationViewItem  AutomationProperties.Name="Settings" Content="Settings" Tag="SettingsTweaksViewPage">
                     <NavigationViewItem.Icon>
                         <ImageIcon Source="ms-appx:///Assets/Ajustes.png"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
             </NavigationView.FooterMenuItems>
-
-
-
             <NavigationView.PaneCustomContent>
                 <Grid>
                     <MenuFlyoutSeparator  />
                 </Grid>
             </NavigationView.PaneCustomContent>
-            
             <NavigationView.AutoSuggestBox>
                 <AutoSuggestBox QueryIcon="Find" AutomationProperties.Name="Search" PlaceholderText="Search.."/>
             </NavigationView.AutoSuggestBox>
 
-            <Frame 
-            x:Name="_MAIN_FRAME"
-            Grid.Row="1"
-            Grid.Column="1"
-            Grid.ColumnSpan="3"/>
+            <Grid>
+                <Frame  x:Name="_MAIN_FRAME"  Grid.Row="1" Grid.Column="1"   Grid.ColumnSpan="3">
+                    <Frame.ContentTransitions>
+                        <TransitionCollection>
+                            <NavigationThemeTransition  />
+                        </TransitionCollection>
+                    </Frame.ContentTransitions>
+                </Frame>
+                
+                <Border  x:Name="_INFO_BORDER" Background="#00A884" Grid.Row="2" Grid.Column="0"
+                         Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"  Height="25">
+
+                    <Grid>
+                        <StackPanel x:Name="_CONTROLS_STACKPANEL" Orientation="Horizontal">
+
+                            <StackPanel  x:Name="_CHANGE_STATE" Orientation="Horizontal">
+                                <Image  x:Name="_STATE_ICON" Source="ms-appx:///Assets/State.png" Width="15"
+                                        Height="15" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10 0 0 0" />
+                                <TextBlock x:Name="CHANGE_STATE_TEXT" Text="{x:Bind Viewmodel._STATE_TEXT_CHANGE}" VerticalAlignment="Center"
+                                           HorizontalAlignment="Left" FontSize="9" FontWeight="SemiBold" Margin="10 0 0 0"/>
+                            
+                            </StackPanel>
+
+                            <Button x:Name="_ALERT_BUTTON" Click="_ONCLICK_ALERTDIALOG" Background="#00A884" Margin="5 0 0 0">
+
+                                <Button.Style>
+                                    <Style  TargetType="Button">
+                                        <Setter  Property="BorderThickness"  Value="0"/>
+                                    </Style>
+                                </Button.Style>
+
+                                <StackPanel x:Name="_ICONS_STACK"  Orientation="Horizontal" Height="auto">
+
+                                    <Image x:Name="_ALERT_ICON" Source="ms-appx:///Assets/Alert.png" Height="20"
+                                           HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10 0 0 0" />
+
+                                    <TextBlock x:Name="_ALERT_COUNT_TEXT"  Text="{x:Bind Viewmodel._ALERTCOUNT}" VerticalAlignment="Center"
+                                               HorizontalAlignment="Left" FontSize="10" FontWeight="SemiBold" Margin="10 0 0 0"/>
+                                    
+                                </StackPanel>
+
+                            </Button>
+
+                        </StackPanel>
+
+                        <Button x:Name="_HELP_BUTTON" Height="auto" HorizontalAlignment="Right" VerticalAlignment="Center" Background="#00A884" Click="_ONCLICK_HELPVIEW">
+
+                            <Button.Style>
+                                <Style  TargetType="Button">
+                                    <Setter  Property="BorderThickness" Value="0"/>
+                                </Style>
+                            </Button.Style>
+
+                            <StackPanel  x:Name="_HELP_STACKPANEL" Orientation="Horizontal"  Height="auto">
+
+                                <TextBlock x:Name="_HELP_TEXT"  VerticalAlignment="Center" HorizontalAlignment="Right"
+                                           FontSize="10" FontWeight="SemiBold" Text="Help"/>
+                                
+                            </StackPanel>
+                        </Button>
+
+                        <ContentDialog   x:Name="_ALERT_COUNT_DIALOG" CloseButtonText="Cerrar" Title="{x:Bind Viewmodel._ALERT_TEXTT}" Background="#111B21">
+                            <ContentDialog.TitleTemplate>
+                                <DataTemplate>
+                                    <StackPanel x:Name="_ALERT_COUNT_DIALOG_PANEL" Orientation="Horizontal">
+                                        <Image  x:Name="_ROOMBA_IMAGE" Source="ms-appx:///Assets/ElRoomba.png"/>
+                                        <TextBlock  x:Name="_ROOMBA_TEXT_ALERT_DIALOG" Margin="10 0 0 0" Text="ELROOMBA" FontWeight="Bold"
+                                                    VerticalAlignment="Center"/>
+
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ContentDialog.TitleTemplate>
+
+
+                            <ScrollViewer   x:Name="SCROLLBAR_ALERT_DIAGNOSTIC" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible"
+                                            VerticalScrollMode="Enabled" HorizontalScrollMode="Enabled">
+
+                                <StackPanel  x:Name="_ALERTDIALOG_MAINSTACKPANEL" Orientation="Vertical" Padding="25">
+
+                                    <TextBlock  x:Name="_PROBLEM_TEXT" Text="{x:Bind Viewmodel._ALERT_TEXTT}" FontWeight="Bold"
+                                                FontSize="18" FontStretch="Expanded"  VerticalAlignment="Top" HorizontalAlignment="Left"/>
+
+                                    <StackPanel x:Name="_SCROLL_GRID_ALERT" Orientation="Vertical" Margin="0 20 0 0">
+
+                                        <TextBlock  x:Name="_PROBLEM_DIAGNOSTICS_TEXT">
+                                            
+                                            <Run x:Name="_PROBLEM_DIAGNOSTIC_TEXT" Text="{x:Bind Viewmodel._Diagnostic_Problem_Text1}"
+                                                  FontWeight="SemiBold" FontSize="10" FontStretch="Normal"/>
+                                            <LineBreak />
+                                            <Run x:Name="_PROBLEM_DIAGNOSTIC2_TEXT" Text="{x:Bind Viewmodel._Diagnostic_Problem_Text22}"
+                                                 FontWeight="SemiBold" FontSize="10" FontStretch="Normal"/>
+                                            <LineBreak />
+                                            <Run x:Name="_PROBLEM_DIAGNOSTIC3_TEXT" Text="{x:Bind Viewmodel._Diagnostic_Problem_Text33}"
+                                                  FontWeight="SemiBold" FontSize="10" FontStretch="Normal"/>
+                                            <LineBreak />
+                                            <Run x:Name="_PROBLEM_DIAGNOSTIC5_TEXT" Text="{x:Bind Viewmodel._Diagnostic_Problem_Text55}"
+                                                 FontWeight="SemiBold" FontSize="10" FontStretch="Normal"/>
+                                            <LineBreak />
+                                            <Run x:Name="_PROBLEM_DIAGNOSTIC4_TEXT" Text="{x:Bind Viewmodel._Diagnostic_Problem_Text44}"
+                                                 FontWeight="SemiBold" FontSize="10" FontStretch="Normal"/>
+                                            <LineBreak />
+
+                                        </TextBlock>
+
+                                    </StackPanel>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </ContentDialog>
+                    </Grid>
+                </Border>
+                <InfoBar Title="ElRoomba" Background="#111B21"
+                         Message="No has iniciado sesión, Inicia sesión o registrate para Disfrutar de todas las ventajas de ELRoomba"
+                         Severity="Informational"  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="5" VerticalAlignment="Top" HorizontalAlignment="Stretch"
+                         IsClosable="False"  IsOpen="{x:Bind Viewmodel._LOGINSTATE}">
+                    <InfoBar.ActionButton>
+                        <Button Content="Iniciar Sesión" x:Name="BTN_LOGIN" Click="ONCLICK_BTNLOGIN">
+                            <Button.Resources>
+                                <ResourceDictionary>
+                                    <ResourceDictionary.ThemeDictionaries>
+                                        <ResourceDictionary x:Key="Dark">
+                                            <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
+                                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#2F3548"/>
+                                        </ResourceDictionary>
+                                        <ResourceDictionary x:Key="Light">
+                                            <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
+                                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#2F3548"/>
+                                        </ResourceDictionary>
+                                    </ResourceDictionary.ThemeDictionaries>
+                                </ResourceDictionary>
+                            </Button.Resources>
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="#00A884"/>
+                                    <Setter Property="CornerRadius" Value="{StaticResource ControlCornerRadius}"/>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                    </InfoBar.ActionButton>
+                </InfoBar>
+            </Grid>
+
 
         </NavigationView>
 
-      
 
 
     </Grid>

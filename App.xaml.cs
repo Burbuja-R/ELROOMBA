@@ -1,11 +1,14 @@
 ﻿using CommunityToolkit.Mvvm.DependencyInjection;
 using ELROOMBA.Viewmodels;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.UI;
 using Microsoft.UI.Text;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Media.Imaging;
 using System;
+using System.Drawing;
 using System.Threading.Tasks;
 
 
@@ -27,7 +30,6 @@ public partial class App : Application
     {
         this.InitializeComponent();
         Ioc.Default.ConfigureServices(new ServiceCollection()
-            .AddSingleton<InfobarFrameViewModel>()
             .AddSingleton<MainWindowViewModel>()
             .BuildServiceProvider());
     }
@@ -46,9 +48,9 @@ public partial class App : Application
             /// </summary>
             /// <param name="args">Details about the launch request and process.</param>
             Image Logo = new Image();
-            Logo.Source = new BitmapImage(new Uri("ms-appx:///Assets/ElRoomba.png"));
-            Logo.Width = 100;
-            Logo.Height = 100;
+            Logo.Source = new BitmapImage(new Uri("ms-appx:///Assets/windows.gif"));
+            Logo.Width = 257;
+            Logo.Height = 201;
             Logo.VerticalAlignment = VerticalAlignment.Center;
             Logo.HorizontalAlignment = HorizontalAlignment.Center;
 
@@ -68,8 +70,8 @@ public partial class App : Application
             /// </summary>
             /// <param name="args">Details about the launch request and process.</param>
             ProgressBar cargando = new ProgressBar();
-            cargando.Width = 75;
-            cargando.Height = 75;
+            cargando.Width = 100;
+            cargando.Height = 100;
             cargando.IsIndeterminate = true;
             cargando.HorizontalAlignment = HorizontalAlignment.Center;
             cargando.VerticalAlignment = VerticalAlignment.Center;
@@ -79,10 +81,17 @@ public partial class App : Application
             /// Grid necesario para el orden de los componentes
             /// </summary>
             /// <param name="args">Details about the launch request and process.</param>
+
             Grid grid = new Grid();
             grid.Children.Add(Logo);
             grid.Children.Add(cargando);
             grid.Children.Add(LogoTxt);
+
+            /// <summary>
+            /// Cambiamos algunas propiedades de la ventana principal
+            /// </summary>
+            /// <param name="args">Details about the launch request and process.</param>
+
 
             /// <summary>
             /// Mostramos la ventana y preguardamos el estado incial de la 
@@ -95,7 +104,7 @@ public partial class App : Application
             Mwindow = _window.Content;
             _window.Content = grid;
             _window.Activate();
-            await Task.Delay(2000);
+            await Task.Delay( 5000);
             _window.Content = (UIElement)Mwindow;
         }
         catch (Exception)
@@ -105,7 +114,7 @@ public partial class App : Application
             /// </summary>
             /// <param name="args">Details about the launch request and process.</param>
             Image LogoE = new Image();
-            LogoE.Source = new BitmapImage(new Uri("ms-appx:///Assets/ElRoomba.png"));
+            LogoE.Source = new BitmapImage(new Uri("ms-appx:///Assets/windows.gif"));
             LogoE.Width = 100;
             LogoE.Height = 100;
             LogoE.VerticalAlignment = VerticalAlignment.Center;

@@ -1,0 +1,248 @@
+﻿<Page
+    x:Class="ELROOMBA.Pages.HelpViewPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ELROOMBA.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="#0B141A">
+
+    <Grid>
+
+        <ScrollViewer HorizontalScrollBarVisibility="Visible" HorizontalScrollMode="Enabled">
+            
+            <Grid>
+
+                <Image Source="ms-appx:///Assets/Chatbot.png"
+                   Width="96"
+                   Height="96"
+                   VerticalAlignment="Top" HorizontalAlignment="Center"
+                   Margin="0 40 0 0"/>
+
+                <TextBlock Text="Hey, Bienvenid@!"
+                       FontSize="40" FontWeight="ExtraBlack"
+                       VerticalAlignment="Top" HorizontalAlignment="Center"
+                       Margin="0 120 0 0"/>
+
+                <StackPanel Orientation="Vertical" VerticalAlignment="Top"
+                        HorizontalAlignment="Left" Margin="20 200 0 0" Padding="40">
+
+                    <TextBlock FontSize="12" Foreground="#CDCFD1">
+                        <Run FontSize="20" FontWeight="Bold" Foreground="White">Preguntas Frecuentes [ FAQ ]</Run>
+                        <LineBreak />
+                        <LineBreak />i 
+                        <LineBreak />
+                    <Hyperlink>[+] Que es ELRoomba?</Hyperlink>
+                        <LineBreak />
+                    <Hyperlink>[+] Para que sirve?</Hyperlink>
+                        <LineBreak />
+                    <Hyperlink>[+] Si tengo un buen Pc, Notaría el cambio ?</Hyperlink>
+                        <LineBreak />
+                    <Hyperlink>[+] Cada cuanto lo tengo que usar?</Hyperlink>
+                        <LineBreak />
+                    <Hyperlink>[+] Hay riesgo de que dañe algo, y si pasa como lo soluciono?</Hyperlink>
+                        <LineBreak />
+                    <Hyperlink>[+] Como contacto con el creador de ELRoomba?</Hyperlink>
+                        <LineBreak />
+                    <Hyperlink>[+] ElRoomba tiene acceso a la información de mi pc?</Hyperlink>
+                        <LineBreak />
+                    <Hyperlink>[+] Tengo que tenerlo abierto mientras juego?</Hyperlink>
+                        <LineBreak />
+                    <Hyperlink>[+] Como puedo saber si el programa Funciona?</Hyperlink>
+                        <LineBreak />
+                    <Hyperlink>[+] ElRoomba es OpenSource?</Hyperlink>
+                        <LineBreak />
+                    <Hyperlink>[+] Con que dispositivos funciona ELRoomba?</Hyperlink>
+                        <LineBreak />
+                    <Hyperlink>[+] ElRoomba tiene actualizaciones, y si es así, como lo puedo actualizar?</Hyperlink>
+                        <LineBreak />
+                    <Hyperlink>[+] ElRoomba Cuenta con un apartado de optimización de internet, Si aplico esos ajustes me bajara el ping?</Hyperlink>
+                        <LineBreak />
+                        <LineBreak />
+                        <LineBreak />
+                    </TextBlock>
+                    <TextBlock FontSize="12" Foreground="#CDCFD1">
+                        <Run FontWeight="Bold" FontSize="20" Foreground="White">¿Que es ElRoomba?</Run>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run>ElRoomba es un programa Creado por @burbuja__R, con multiples Funciones!.La principal de todas ellas es que puede optimizar tu equipo de manera rapida y sencilla. </Run>
+                        <LineBreak />
+                        <Run>Muchas de las otras cualidades de ELRoomba Son la personalización a la hora de optimizar tu equipo, Pudiendo así elegir cada Tweak por Separado, Adémas por supuesto de </Run>
+                        <LineBreak />
+                        <Run>La gran Cantidad de Información que proporcionamos acerca del tweak</Run>
+                        <LineBreak />
+                        <LineBreak />
+                        <LineBreak />
+                    </TextBlock>
+                    <TextBlock FontSize="12" Foreground="#CDCFD1">
+                        <Run FontWeight="Bold" FontSize="20" Foreground="White">¿Para que sirve?</Run>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run>Como hemos mencionado anteriormente ELRoomba cuenta con multiples Funciones las Principales son:</Run>
+                        <LineBreak/>
+                        <Run>[+] Optimización Absoluta del Sistema Operativo ( Cpu - Gpu - Red )</Run>
+                        <LineBreak/>
+                        <Run>[+] Personalizacón del Sistema Operativo</Run>
+                        <LineBreak/>
+                        <Run>[+] Revertir cambios No deseados en su sistema</Run>
+                        <LineBreak/>
+                        <Run>[+] Diagnostico del Estado actual del ordenador Con logs precisos</Run>
+                        <LineBreak/>
+                        <Run>[+] Capacidad ilimitada de usos</Run>
+                        <LineBreak/>
+                        <Run>[+] Solución a Problemas Presentados en Juegos</Run>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <LineBreak/>
+                    </TextBlock>
+                    <TextBlock FontSize="12" Foreground="#CDCFD1">
+                        <Run FontWeight="Bold" FontSize="20" Foreground="White">¿Si tengo un buen PC, Notaría el cambio?</Run>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run>La respuesta Corta seria Si, cada equipo rinde mejor cuando mas ligero sea, recordamos que la Optimización que ElRoomba hace</Run>
+                        <LineBreak/>
+                        <Run>en su equipo consta de prescindir de Ciertas cosas para conseguir ese Plus de rendimiento.Esto por supuesto Se notará en los Fps (Fotogramas por segundo) y la Latencia del equipo</Run>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <LineBreak/>
+                    </TextBlock>
+                    <TextBlock FontSize="12" Foreground="#CDCFD1">
+                        <Run FontWeight="Bold" FontSize="20" Foreground="White">¿Cada cuanto lo tengo que usar?</Run>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run>ElRoomba aplica ajustes Permanentes en su equipo, Sin embargo, es posible que al actualizar el sistema Operativo a una version mas frecuente</Run>
+                        <LineBreak/>
+                        <Run>Provoque que los cambios sean restaurados a como estaban por defecto, Igualmente esto seria poco problable que pase, Pero por si acaso Recomandamos</Run>
+                        <LineBreak/>
+                        <Run>Usarlo 1 vez cada semana, Por si nuestro Programa ha actualizado algunos de los ajustes que ya ha usado por unos mejores.</Run>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <LineBreak/>
+                    </TextBlock>
+                    <TextBlock FontSize="12" Foreground="#CDCFD1">
+                        <Run FontWeight="Bold" FontSize="20" Foreground="White">¿Hay riesgo de que dañe algo, y si pasa como lo soluciono?</Run>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run>Es posible, Pero siempre antes de Aplicar cualquier cambio en el equipo ElRoomba se encarga de hacer un punto de restauración por usted</Run>
+                        <LineBreak/>
+                        <Run>Esto nos previene del 99.999% de los cambios no deseados en nuestro sistema o cualquier Problema que pueda ocasionar ELRoomba</Run>
+                        <LineBreak/>
+                        <Run>ElRoomba es totalmente seguro si sabes que tocar y que no, recomendamos a los usuario leer la descripción de los tweaks antes de Aplicar todo</Run>
+                        <LineBreak/>
+                        <Run>También seria posible que los problemas venga por una aplicación que tenga previamente instalada en su equipo que interfiera con algunos ajustes de ElRoomba</Run>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <LineBreak/>
+                    </TextBlock>
+                    <TextBlock FontSize="12" Foreground="#CDCFD1">
+                        <Run FontWeight="Bold" FontSize="20" Foreground="White">¿Como contacto con el creador de ELRoomba?</Run>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run>En caso de que quieras Contactarme para Explicarme algún error o algo por el estilo, puedes abrir un problema del programa en la pagina de GitHub</Run>
+                        <LineBreak />
+                        <Run>De esa manera podré ayudarte y responderte, Si por el contrario lo que quieres es contactarme por X razón, Siempre puedes escribirme al MD   </Run>
+                        <LineBreak/>
+                        <Run>de Twitter ( @Burbuja__R ) o bien al MD de discord ( Burbuja#2682 ).</Run>
+                        <LineBreak />
+                        <LineBreak />
+                        <LineBreak />
+                    </TextBlock>
+                    <TextBlock FontSize="12" Foreground="#CDCFD1">
+                        <Run FontWeight="Bold" FontSize="20" Foreground="White">¿ElRoomba tiene acceso a la información de mi pc?</Run>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run>ElRoomba no guarda la información de tu cuenta de ninguna de las maneras, La intención es ayudar a que la gente gane un mejor Rendimiento</Run>
+                        <LineBreak/>
+                        <Run>Sin tener que pagar por nada, No obstante la información de logueo de Nuestra aplicación la hacemos totalmente Segura y encyptada Para evitar hackeos a la aplicación</Run>
+                        <LineBreak/>
+                        <Run>Para estar totalmente seguro de que ELRoomba no roba información Puedes revisar el codigo del Programa.</Run>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <LineBreak/>
+                    </TextBlock>
+                    <TextBlock FontSize="12" Foreground="#CDCFD1">
+                        <Run FontWeight="Bold" FontSize="20" Foreground="White">¿Tengo que tenerlo abierto mientras juego?</Run>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run>No hace falta tener El Programa abierto mientras usted se pone a jugar o abrirlo cada vez que incie pc, Los cambios son permanentes.</Run>
+                        <LineBreak/>
+                        <Run>Lo que si es altamente recomendable es abrirlo 1 vez al dia para ver si hay alguna actualización del programa.</Run>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <LineBreak/>
+                    </TextBlock>
+                    <TextBlock FontSize="12" Foreground="#CDCFD1">
+                        <Run FontWeight="Bold" FontSize="20" Foreground="White">¿Como puedo saber si el programa Funciona?</Run>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run>Si sientes que El juego se siente mas fluido pero crees que es placebo, Siempre puedes testear de diferentes maneras</Run>
+                        <LineBreak/>
+                        <Run>como funciona ElRommba , puedes usar medidores de latencia u FPSbenchmark tales como CapframeX, latencyMonitor ,ect..</Run>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <LineBreak/>
+                    </TextBlock>
+                    <TextBlock FontSize="12" Foreground="#CDCFD1">
+                        <Run FontWeight="Bold" FontSize="20" Foreground="White">¿ElRoomba es OpenSource?</Run>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run>ElRoomba es totalmente OpenSource con licencia MIT de github, es decir cualquier usuario podria proponer un cambio en el codigo</Run>
+                        <LineBreak/>
+                        <Run>Del programa en forma de commit, De esa manera podria integrar nuevas opciones que a los propios usuarios se les ocurran, o bien nuevos ajustes de optimización.</Run>
+                        <LineBreak/>
+                        <Run>Si no sabes como funciona las licencias de GitHub Haz click </Run><Hyperlink >Aquí</Hyperlink>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <LineBreak/>
+                    </TextBlock>
+                    <TextBlock FontSize="12" Foreground="#CDCFD1">
+                        <Run FontWeight="Bold" FontSize="20" Foreground="White">¿Con que dispositivos funciona ELRoomba?</Run>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run>ElRoomba funciona con cualquier dispositivo que cuente con Windows10 - 1709 o superior instalado no obstante Este programa podria ser usado</Run>
+                        <LineBreak/>
+                        <Run>en versiones más antiguas de window10, Pero no es recomendable ya que es bastante problable que acabe en una reistalacion limpia del sistema Operativo o Bsod.</Run>
+                        <LineBreak/>
+                        <Run>Si no sabes como ver tu versión de windows actual haz click </Run> <Hyperlink>Aquí</Hyperlink>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <LineBreak/>
+                    </TextBlock>
+                    <TextBlock FontSize="12" Foreground="#CDCFD1">
+                        <Run FontWeight="Bold" FontSize="20" Foreground="White">¿ElRoomba tiene actualizaciones, y si es así, como lo puedo actualizar?</Run>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run>ElRoomba cuenta con un sistema de actualizaciones Propio, dependiendo de la manera de como lo hayas instalado  aquí dejamos como hacerlo</Run>
+                        <LineBreak/>
+                        <Run>Si lo has instalado desde la MicrosoftStore, entonces no hace falta ni abrirlo para que se actualize ya que es de manera predeterminada cuenta con su sistema de actualizaciones</Run>
+                        <LineBreak/>
+                        <Run>de manera automatica</Run>
+                        <LineBreak/>
+                        <Run>Si por el contrario lo has descargado desde el ejecutable Basta con abrirlo y te deberia salir una nueva actualización cuando la haya, en caso raro</Run>
+                        <LineBreak/>
+                        <Run>de que no suceda simplemente vaya al apartado de 'Settings > Buscar Actualizaciones' dentro del programa.</Run>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <LineBreak/>
+                    </TextBlock>
+                    <TextBlock FontSize="12" Foreground="#CDCFD1">
+                        <Run FontWeight="Bold" FontSize="20" Foreground="White">¿ElRoomba Cuenta con un apartado de optimización de internet, Si aplico esos ajustes me bajara el ping?</Run>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run>Bajar el ping Es imposible, tu conexion es la que es, nosotros ajustamos tu internet de la manera mas optima y mas rapida</Run>
+                        <LineBreak/>
+                        <Run>el ping podria llegar a bajar debido a que la conexion se hace mas estable si tenias picos de ping de 110 pues ElRoomba se encargará de solucionar esos problemas.</Run>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <LineBreak/>
+                    </TextBlock>
+                </StackPanel>
+
+
+            </Grid>
+            
+        </ScrollViewer>
+        
+    </Grid>
+</Page>
