@@ -44,7 +44,9 @@ public sealed partial class MainWindow : Window
 
     }
 
+
     private async void _ONCLICK_ALERTDIALOG(object sender, RoutedEventArgs e) { ContentDialogResult _ALERTDIALOG = await _ALERT_COUNT_DIALOG.ShowAsync(); }
 
     private void _ONCLICK_HELPVIEW(object sender, RoutedEventArgs e) { _MAIN_FRAME.Navigate(typeof(HelpViewPage), null, new EntranceNavigationTransitionInfo()); }
+
 }

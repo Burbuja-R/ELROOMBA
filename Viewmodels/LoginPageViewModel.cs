@@ -11,7 +11,6 @@ namespace ELROOMBA.Viewmodels;
 public partial class LoginPageViewModel
 {
 
-
     public LoginPageViewModel()
     {
 

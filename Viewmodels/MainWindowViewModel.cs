@@ -22,6 +22,11 @@ public partial class MainWindowViewModel
     public bool _LOGINSTATE = true;
 
     /// <summary>
+    /// Variable usada para mostrar el primer content Dialog con los datos y politicas de ElRoomba.
+    /// </summary>
+    public bool _FIRSTDIALOG = true;
+
+    /// <summary>
     /// Variable Alert Count.
     /// </summary>
     public int _ALERTCOUNT;
@@ -50,6 +55,8 @@ public partial class MainWindowViewModel
         get => _STATE_TEXT;
         set => SetProperty(ref _STATE_TEXT, value);
     }
+
+    
 
     /// <summary>
     /// Unos String que se usara para introducir el texto de
@@ -164,6 +171,7 @@ public partial class MainWindowViewModel
         SystemDiagnostic();
         if (_ALERTCOUNT > 0) { _ALERT_TEXT = "Hey, We found " + _ALERTCOUNT + " Alerts!"; }
         if (_ALERTCOUNT == 0) { _STATE_TEXT_CHANGE = "There`s no Problems Found."; } else { _STATE_TEXT_CHANGE = "Hey, We found " + _ALERTCOUNT + " Alerts!, Please take a look!"; }
+    
     }
   
 }
