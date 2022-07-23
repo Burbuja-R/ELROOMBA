@@ -12,14 +12,20 @@
     <EnableMsixTooling>true</EnableMsixTooling>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+	
   <ItemGroup>
     <Compile Remove="Pages\**" />
     <EmbeddedResource Remove="Pages\**" />
     <None Remove="Pages\**" />
     <Page Remove="Pages\**" />
   </ItemGroup>
+	
   <ItemGroup>
+	  <Content Include="Assets\Background.png" />
+	  <Content Include="Assets\Github96.png" />
+	  <Content Include="Assets\github.png" />
 	  <Content Include="Assets\windows.gif" />
+	  <Content Include="Assets\Background.png" />
 	  <Content Include="Assets\Cpu.png" />
 	  <Content Include="Assets\Advertencia.png" />
 	  <Content Include="Assets\Chatbot.png" />
@@ -93,23 +99,40 @@
     <PRIResource Remove="Pages\**" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="View\AccountTweaksViewPage.xaml" />
+    <Content Include="Assets\back.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\img28.jpg" />
+    <Content Include="Assets\img29.jpg" />
+    <Content Include="Assets\img30.jpg" />
+    <Content Include="Assets\img31.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\trending.png" />
+    <Content Include="Assets\twitter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\img100.jpg" />
+    <Content Include="Assets\img101.jpg" />
+    <Content Include="Assets\img102.jpg" />
+    <Content Include="Assets\img103.jpg" />
+    <Content Include="Assets\img104.jpg" />
+    <Content Include="Assets\img105.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\boxBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <None Remove="View\CpuTweaksViewPage.xaml" />
     <None Remove="View\EnergyTweaksViewPage.xaml" />
     <None Remove="View\FavoriteTweaksViewPage.xaml" />
     <None Remove="View\GpuTweaksViewPage.xaml" />
     <None Remove="View\InternetTweaksViewPage.xaml" />
-    <None Remove="View\LoginViewPage.xaml" />
     <None Remove="View\SettingsTweaksViewPage.xaml" />
     <None Remove="View\SystemTweaksViewPage.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Page Update="View\FavoriteTweaksViewPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="View\AccountTweaksViewPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
@@ -140,11 +163,6 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="View\SystemTweaksViewPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="View\LoginViewPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

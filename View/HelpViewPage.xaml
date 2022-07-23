@@ -9,7 +9,6 @@
     Background="#0B141A">
 
     <Grid>
-
         <ScrollViewer HorizontalScrollBarVisibility="Visible" HorizontalScrollMode="Enabled">
             
             <Grid>
@@ -31,7 +30,7 @@
                     <TextBlock FontSize="12" Foreground="#CDCFD1">
                         <Run FontSize="20" FontWeight="Bold" Foreground="White">Preguntas Frecuentes [ FAQ ]</Run>
                         <LineBreak />
-                        <LineBreak />i 
+                        <LineBreak />
                         <LineBreak />
                     <Hyperlink>[+] Que es ELRoomba?</Hyperlink>
                         <LineBreak />
@@ -238,7 +237,6 @@
                         <LineBreak/>
                     </TextBlock>
                 </StackPanel>
-
 
             </Grid>
             

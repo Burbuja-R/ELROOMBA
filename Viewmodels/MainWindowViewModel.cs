@@ -8,23 +8,12 @@ namespace ELROOMBA.Viewmodels;
 /// <summary>
 /// Provides application-specific behavior to supplement the default Application class.
 /// </summary>
-[ObservableObject]
-public partial class MainWindowViewModel
+public partial class MainWindowViewModel : ObservableObject
 {
     /// <summary>
     /// Titulo principal de la aplicacion.
     /// </summary>
     public string Title = "ELROOMBA";
-
-    /// <summary>
-    /// Variable usada para recibir el estado del inicio de sesion
-    /// </summary>
-    public bool _LOGINSTATE = true;
-
-    /// <summary>
-    /// Variable usada para mostrar el primer content Dialog con los datos y politicas de ElRoomba.
-    /// </summary>
-    public bool _FIRSTDIALOG = true;
 
     /// <summary>
     /// Variable Alert Count.
@@ -55,8 +44,6 @@ public partial class MainWindowViewModel
         get => _STATE_TEXT;
         set => SetProperty(ref _STATE_TEXT, value);
     }
-
-    
 
     /// <summary>
     /// Unos String que se usara para introducir el texto de
@@ -96,7 +83,6 @@ public partial class MainWindowViewModel
         get => _Diagnostic_Problem_Text5;
         set => SetProperty(ref _Diagnostic_Problem_Text5, value);
     }
-
 
     /// <summary>
     /// Metodo de Infobar para Diagnosticar el estado Del equipo

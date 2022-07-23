@@ -21,7 +21,6 @@
 
             <TextBlock x:Name="_TITLE_TEXT_BLOCK" Margin="40,0,0,0" VerticalAlignment="Center"
                        Text="{x:Bind Viewmodel.Title}" TextWrapping="NoWrap" />
-            
         </Grid>
 
         <NavigationView x:Name="nvSample" IsSettingsVisible="False" IsBackButtonVisible="Collapsed" IsPaneToggleButtonVisible="True"
@@ -60,11 +59,6 @@
                         <ImageIcon Source="ms-appx:///Assets/Fav.png"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem  AutomationProperties.Name="Account" Content="Account" Tag="AccountTweaksViewPage">
-                    <NavigationViewItem.Icon>
-                        <ImageIcon Source="ms-appx:///Assets/Chatbot.png"/>
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
                 <NavigationViewItem  AutomationProperties.Name="Settings" Content="Settings" Tag="SettingsTweaksViewPage">
                     <NavigationViewItem.Icon>
                         <ImageIcon Source="ms-appx:///Assets/Ajustes.png"/>
@@ -81,6 +75,7 @@
             </NavigationView.AutoSuggestBox>
 
             <Grid>
+                
                 <Frame  x:Name="_MAIN_FRAME"  Grid.Row="1" Grid.Column="1"   Grid.ColumnSpan="3">
                     <Frame.ContentTransitions>
                         <TransitionCollection>
@@ -190,76 +185,7 @@
                         </ContentDialog>
                     </Grid>
                 </Border>
-                <ContentDialog   x:Name="_POLITICA_ROOMBA" CloseButtonText="Cerrar" Title="{x:Bind Viewmodel._ALERT_TEXTT}" Background="#111B21"  PrimaryButtonText="Entendido">
-
-                    <ContentDialog.PrimaryButtonStyle>
-                        <Style TargetType="Button">
-                            <Setter Property="Background" Value="#00A884"/>
-                            <Setter Property="CornerRadius" Value="{ThemeResource ControlCornerRadius}"/>
-                        </Style>
-                    </ContentDialog.PrimaryButtonStyle>
-                    
-                    <ContentDialog.TitleTemplate>
-                        <DataTemplate>
-                            <StackPanel x:Name="_POLITICA_ROOMBA_DIALOG_PANEL" Orientation="Horizontal">
-                                <Image  x:Name="_ROOMBA_IMAGE" Source="ms-appx:///Assets/ElRoomba.png"/>
-                                <TextBlock  x:Name="_ROOMBA_TEXT_ALERT_DIALOG" Margin="10 0 0 0" Text="ELROOMBA" FontWeight="Bold"
-                                                    VerticalAlignment="Center"/>
-
-                            </StackPanel>
-                        </DataTemplate>
-                    </ContentDialog.TitleTemplate>
-
-
-                    <ScrollViewer   x:Name="_POLITICA_ROOMBA_SCROLL" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible"
-                                            VerticalScrollMode="Enabled" HorizontalScrollMode="Enabled" >
-
-                        <StackPanel  x:Name="_POLITICA_ROOMBA_MAINSTACKPANEL" Orientation="Vertical" Padding="25">
-
-                            <TextBlock  x:Name="_ALERTDIALOG_PROBLEM_TEXT" Text="Politica De Uso de  ELRoomba" FontWeight="Bold"
-                                                FontSize="18" FontStretch="Expanded"  VerticalAlignment="Top" HorizontalAlignment="Left"/>
-
-                            <StackPanel x:Name="_ALERTDIALOG_SCROLL_GRID_ALERT" Orientation="Vertical" Margin="0 20 0 0">
-
-                                <TextBlock />
-
-                            </StackPanel>
-                        </StackPanel>
-                    </ScrollViewer>
-                </ContentDialog>
-                <InfoBar Title="ElRoomba" Background="#111B21"
-                         Message="No has iniciado sesión, Inicia sesión o registrate para Disfrutar de todas las ventajas de ELRoomba"
-                         Severity="Informational"  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="5" VerticalAlignment="Top" HorizontalAlignment="Stretch"
-                         IsClosable="False"  IsOpen="{x:Bind Viewmodel._LOGINSTATE}">
-                    <InfoBar.ActionButton>
-                        <Button Content="Iniciar Sesión" x:Name="BTN_LOGIN" Click="ONCLICK_BTNLOGIN">
-                            <Button.Resources>
-                                <ResourceDictionary>
-                                    <ResourceDictionary.ThemeDictionaries>
-                                        <ResourceDictionary x:Key="Dark">
-                                            <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
-                                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#2F3548"/>
-                                        </ResourceDictionary>
-                                        <ResourceDictionary x:Key="Light">
-                                            <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
-                                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#2F3548"/>
-                                        </ResourceDictionary>
-                                    </ResourceDictionary.ThemeDictionaries>
-                                </ResourceDictionary>
-                            </Button.Resources>
-                            <Button.Style>
-                                <Style TargetType="Button">
-                                    <Setter Property="Background" Value="#00A884"/>
-                                    <Setter Property="CornerRadius" Value="{StaticResource ControlCornerRadius}"/>
-                                </Style>
-                            </Button.Style>
-                        </Button>
-                    </InfoBar.ActionButton>
-                </InfoBar>
             </Grid>
-
-
         </NavigationView>
-
     </Grid>
 </Window>

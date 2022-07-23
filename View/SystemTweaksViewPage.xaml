@@ -7,8 +7,125 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="#0B141A">
+    
+ 
+    <Grid Margin="40 0 0 0" Padding="0 0 60 0">
 
-    <Grid>
+        <Grid>
+            <TextBlock Text="ELROOMBA" FontSize="20" FontFamily="{ThemeResource PivotTitleFontFamily}" VerticalAlignment="Top" HorizontalAlignment="Center" Padding="15" FontWeight="ExtraBlack"/>
+
+            <AppBarSeparator Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Center" Background="#00A884"/>
+
+        </Grid>
+
+
+        <ScrollViewer HorizontalContentAlignment="Center" HorizontalScrollMode="Enabled" Visibility="Visible" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible"
+                      VerticalScrollMode="Enabled" VerticalContentAlignment="Center">
+
+            <Grid>
+                
+                <StackPanel Margin="0 220 0 0" Orientation="Horizontal" Spacing="20" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+                    
+                    <Button VerticalAlignment="Top" HorizontalAlignment="Left" Width="175" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Padding" Value="0"/>
+                                <Setter Property="BorderThickness" Value="0"/>
+                                <Setter Property="CornerRadius" Value="{ThemeResource ControlCornerRadius}"/>
+                                <Setter Property="Background" Value="{ThemeResource AcrylicBackgroundFillColorBaseBrush}"/>
+                            </Style>
+                        </Button.Style>
+                        <StackPanel Orientation="Vertical">
+                            <Border  Margin="0" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="60">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="ms-appx:///Assets/img28.jpg" Stretch="Fill"/>
+                                </Border.Background>
+                                <Image Source="ms-appx:///Assets/trending.png" Height="48" Width="48"/>
+                            </Border>
+                            <Border Margin="0" Background="{ThemeResource CustomAcrylicInAppLuminosity}" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Width="175" >
+                                <Grid>
+                                    <TextBlock Text="What`s new!" Padding="15" FontSize="{ThemeResource ContentControlFontSize}" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE773;" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 20 0"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                    </Button>
+                    <Button VerticalAlignment="Top" HorizontalAlignment="Left" Width="175" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Padding" Value="0"/>
+                                <Setter Property="BorderThickness" Value="0"/>
+                                <Setter Property="CornerRadius" Value="{ThemeResource ControlCornerRadius}"/>
+                                <Setter Property="Background" Value="{ThemeResource AcrylicBackgroundFillColorBaseBrush}"/>
+                            </Style>
+                        </Button.Style>
+                        <StackPanel Orientation="Vertical">
+                            <Border  Margin="0" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="60">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="ms-appx:///Assets/img29.jpg" Stretch="Fill"/>
+                                </Border.Background>
+                                <Image Source="ms-appx:///Assets/discord.png" Height="48" Width="48"/>
+                            </Border>
+                            <Border Margin="0" Background="{ThemeResource CustomAcrylicInAppLuminosity}" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Width="175" >
+                                <Grid>
+                                    <TextBlock Text="Discord" Padding="15" FontSize="{ThemeResource ContentControlFontSize}" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE773;" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 20 0"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                    </Button>
+                    <Button VerticalAlignment="Top" HorizontalAlignment="Left" Width="175" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Padding" Value="0"/>
+                                <Setter Property="BorderThickness" Value="0"/>
+                                <Setter Property="CornerRadius" Value="{ThemeResource ControlCornerRadius}"/>
+                                <Setter Property="Background" Value="{ThemeResource AcrylicBackgroundFillColorBaseBrush}"/>
+                            </Style>
+                        </Button.Style>
+                        <StackPanel Orientation="Vertical">
+                            <Border  Margin="0" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="60">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="ms-appx:///Assets/img30.jpg" Stretch="Fill"/>
+                                </Border.Background>
+                                <Image Source="ms-appx:///Assets/twitter.png" Height="48" Width="48"/>
+                            </Border>
+                            <Border Margin="0" Background="{ThemeResource CustomAcrylicInAppLuminosity}" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Width="175" >
+                                <Grid>
+                                    <TextBlock Text="Twitter" Padding="15" FontSize="{ThemeResource ContentControlFontSize}" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE773;" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 20 0"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                    </Button>
+                    <Button VerticalAlignment="Top" HorizontalAlignment="Left" Width="175" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Padding" Value="0"/>
+                                <Setter Property="BorderThickness" Value="0"/>
+                                <Setter Property="CornerRadius" Value="{ThemeResource ControlCornerRadius}"/>
+                                <Setter Property="Background" Value="{ThemeResource AcrylicBackgroundFillColorBaseBrush}"/>
+                            </Style>
+                        </Button.Style>
+                        <StackPanel Orientation="Vertical">
+                            <Border  Margin="0" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="60">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="ms-appx:///Assets/img31.jpg" Stretch="Fill"/>
+                                </Border.Background>
+                                <Image Source="ms-appx:///Assets/github.png" Height="48" Width="48"/>
+                            </Border>
+                            <Border Margin="0" Background="{ThemeResource CustomAcrylicInAppLuminosity}" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Width="175" >
+                                <Grid>
+                                    <TextBlock Text="Github" Padding="15" FontSize="{ThemeResource ContentControlFontSize}" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE773;" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 20 0"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                    </Button>
+
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
 
     </Grid>
 </Page>

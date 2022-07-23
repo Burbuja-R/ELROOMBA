@@ -29,8 +29,6 @@ public sealed partial class MainWindow : Window
 
     public MainWindowViewModel? Viewmodel { get; set; }
 
-    private void ONCLICK_BTNLOGIN(object sender, RoutedEventArgs e) { _MAIN_FRAME.Navigate(typeof(LoginViewPage), null, new DrillInNavigationTransitionInfo()); }
-
     private void NAVIGATIONVIEW(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
     {
         var selectedItem = (NavigationViewItem)args.SelectedItem;
@@ -43,7 +41,6 @@ public sealed partial class MainWindow : Window
         }
 
     }
-
 
     private async void _ONCLICK_ALERTDIALOG(object sender, RoutedEventArgs e) { ContentDialogResult _ALERTDIALOG = await _ALERT_COUNT_DIALOG.ShowAsync(); }
 

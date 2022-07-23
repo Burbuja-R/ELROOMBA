@@ -10,6 +10,9 @@
                 <!-- Other merged dictionaries here -->
             </ResourceDictionary.MergedDictionaries>
             <!-- Other app resources here -->
+            <AcrylicBrush x:Key="CustomAcrylicInAppLuminosity" TintOpacity="0.7760000036098063"
+             TintLuminosityOpacity="0.8" TintColor="SkyBlue" FallbackColor="DeepSkyBlue" />
         </ResourceDictionary>
+       
     </Application.Resources>
 </Application>

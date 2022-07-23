@@ -31,7 +31,6 @@ public partial class App : Application
         Ioc.Default.ConfigureServices(new ServiceCollection()
             .AddSingleton<MainWindowViewModel>()
             .AddSingleton<ROOMBAAPI>()
-            .AddSingleton<LoginPageViewModel>()
             .BuildServiceProvider());
         Viewmodel = Ioc.Default.GetService<ROOMBAAPI>();
     }
@@ -107,7 +106,6 @@ public partial class App : Application
         _window.Activate();
         await Task.Delay(2000);
         await Viewmodel.OnStartLoadingScreenvoid();
-        await Task.Delay(2000);
         _window.Content = (UIElement)Mwindow;
     }
 
